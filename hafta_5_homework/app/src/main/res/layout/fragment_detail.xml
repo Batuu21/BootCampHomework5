@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="moviedetail"
+            type="com.patikadev.mvvmsample.database.MovieDetail" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TextView
+            android:id="@+id/textview_first"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="@{moviedetail.title}"
+            app:layout_constraintBottom_toTopOf="@id/overview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:text="@{moviedetail.overview}"
+            app:layout_constraintBottom_toTopOf="@id/addfav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addfav"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="click to add fav"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
